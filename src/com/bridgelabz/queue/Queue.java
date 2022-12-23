@@ -1,22 +1,51 @@
 package com.bridgelabz.queue;
 
-public class Queue<T> {
+public class Queue<T>
+{
     QueueNode<T> head;
     QueueNode<T> tail;
 
     /**
      * Method to insert the data to queue
      */
-    public void enQueue(T data) {
+    public void enQueue(T data)
+    {
         QueueNode<T> newNode = new QueueNode<>();
         newNode.data = data;
         newNode.next = head;
-        if (head == null) {
+        if (head == null)
+        {
             head = newNode;
             tail = newNode;
-        } else {
+        }
+        else
+        {
             tail.next = newNode;
             tail = newNode;
+        }
+    }
+    /**
+     * Method to delete first element form the queue
+     */
+    public T deQueue()
+    {
+        QueueNode<T> tempNode = head;
+        head = head.next;
+        return tempNode.data;
+
+    }
+    /**
+     * Method to check stack is empty or not
+     */
+    public void isEmpty()
+    {
+        if(tail == null)
+        {
+            System.out.println("Stack is empty");
+        }
+        else
+        {
+            System.out.println("Stack is not empty");
         }
     }
     /**
