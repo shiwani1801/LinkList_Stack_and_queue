@@ -128,6 +128,19 @@ public class LinkedListMain {
 
         System.out.println("**********************************************************************");
     }
+    public static void searchNode() {
+        System.out.println("===============================UC7==============================\n");
+
+        Linkedlist<Integer> linkedlist7 = new Linkedlist<>();
+        linkedlist7.append(56);
+        linkedlist7.append(30);
+        linkedlist7.append(70);
+
+        System.out.println("searching for key 30 :");
+        linkedlist7.search(30);
+        linkedlist7.Display();
+        System.out.println("**********************************************************************");
+    }
 
 
 
